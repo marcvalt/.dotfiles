@@ -53,10 +53,18 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
 
+"Go on top of a word you want to change
+"Press cn or cN
+"Type the new word you want to replace it with
+"Smash that dot '.' multiple times to change all the other occurrences of the word
+"It's quicker than searching or replacing. It's pure magic.
+nnoremap cn *``cgn
+nnoremap cN *``cgN
+
 
 " Don't leave visual mode when (un)indenting
 vnoremap < <gv
 vnoremap > >gv
 
+" Exit binded to jk
 inoremap jk <Esc>
-vnoremap jk <Esc>
