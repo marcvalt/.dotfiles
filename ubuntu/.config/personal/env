@@ -15,7 +15,7 @@ addToPathFront() {
 commitDotFiles() {
     pushd $DOTFILES
     git add .
-    git commit
+    git commit -m "Automatic message."
     git push origin master
     popd
 }
