@@ -9,6 +9,6 @@ alias ebp='$VIM $DOTFILES/zsh/.zsh_profile'
 alias eal='$VIM $PERSONAL/alias'
 alias sbp="source ~/.zshrc"
 
-alias shistory='history | grep'
+alias shi='history | grep'
 
 alias fs='sextant_name.sh ~/scripts/poe/sextant_names.txt'
