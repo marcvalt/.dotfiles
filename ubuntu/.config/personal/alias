@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Vim
+VIM=nvim
+alias vi='$VIM'
+alias vim='$VIM'
+
+alias evrc='$VIM $HOME/.config/nvim/init.vim'
+alias ebp='$VIM $HOME/.zsh_profile'
+alias eal='$VIM $PERSONAL/alias'
+alias sbp="source ~/.zshrc"
+
+alias shistory='history | grep'
+
+alias fs='sextant_name.sh ~/scripts/poe/sextant_names.txt'
