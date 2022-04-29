@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # add to path last position
-function addToPath() {
+function add_to_path() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
     fi
 }
 
 # add to path first position
-function addToPathFront() {
+function add_to_path_front() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$1:$PATH
     fi

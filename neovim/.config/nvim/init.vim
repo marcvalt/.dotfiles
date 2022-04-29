@@ -1,6 +1,6 @@
 set nocompatible
 
-let mapleader = " " 
+let mapleader=" " 
 
 " Moving around, searching and patterns
 set autochdir            "Automatically change working directory to that of open file
@@ -68,3 +68,6 @@ vnoremap > >gv
 
 " Exit binded to jk
 inoremap jk <Esc>
+
+" Show opened files and select which to open
+nnoremap <leader>b :ls<cr>:b<space>

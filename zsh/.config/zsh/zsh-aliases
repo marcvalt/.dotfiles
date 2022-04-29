@@ -6,9 +6,10 @@ alias vi='$VIM'
 alias vim='$VIM'
 alias virc='$VIM $HOME/.config/nvim'
 
-alias vibp='$VIM $ZDOTDIR/zsh-profile'
+alias vizrc='$VIM $ZDOTDIR/zsh-profile'
 alias vial='$VIM $ZDOTDIR/zsh-aliases'
-alias sbp='source $HOME/.zshrc'
+alias vizsh='$VIM $ZDOTDIR'
+alias sozrc='source $HOME/.zshrc'
 
 # colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -25,6 +26,16 @@ alias l='ls -CF'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+
+# mkdir and rmdir
+alias md='mkdir -p'
+alias rd='rmdir'
+
+# previous directories
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
