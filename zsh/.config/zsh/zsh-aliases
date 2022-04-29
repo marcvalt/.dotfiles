@@ -4,19 +4,25 @@
 VIM=nvim
 alias vi='$VIM'
 alias vim='$VIM'
-alias nvimrc='$VIM $DOTFILES/neovim/.config/nvim'
+alias vrc='$VIM $HOME/.config/nvim'
 
-#alias ebp='$VIM $DOTFILES/zsh/.zsh_profile'
-#alias eal='$VIM $PERSONAL/alias'
-#alias sbp="source ~/.zshrc"
+alias vbp='$VIM $ZDOTDIR/zsh-profile'
+alias val='$VIM $ZDOTDIR/zsh-aliases'
+alias sbp='source $HOME/.zshrc'
 
 # colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# some more ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # confirm before overwriting something
-alias cp="cp -i"
+alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
@@ -29,5 +35,5 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
-l
+
 alias shi='history | grep'
