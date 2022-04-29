@@ -4,10 +4,10 @@
 VIM=nvim
 alias vi='$VIM'
 alias vim='$VIM'
-alias vrc='$VIM $HOME/.config/nvim'
+alias virc='$VIM $HOME/.config/nvim'
 
-alias vbp='$VIM $ZDOTDIR/zsh-profile'
-alias val='$VIM $ZDOTDIR/zsh-aliases'
+alias vibp='$VIM $ZDOTDIR/zsh-profile'
+alias vial='$VIM $ZDOTDIR/zsh-aliases'
 alias sbp='source $HOME/.zshrc'
 
 # colorize grep output (good for log files)
