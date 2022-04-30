@@ -70,4 +70,16 @@ vnoremap > >gv
 inoremap jk <Esc>
 
 " Show opened files and select which to open
-nnoremap <leader>b :ls<cr>:b<space>
+nnoremap <Leader>b :ls<CR>:b<Space>
+
+" Tab navigation
+nnoremap <Leader>tc :tabnew<CR>
+nnoremap <Leader>tj :tabnew %<CR>
+nnoremap <Leader>tn :tabnext<CR>
+nnoremap <Leader>tp :tabprevious<CR>
+
+" Split navigation
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
