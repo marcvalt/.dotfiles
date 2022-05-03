@@ -1,6 +1,13 @@
 set nocompatible
 
-let mapleader=" " 
+" Ignore files
+set wildignore+=**/.git/*
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-commentary'
+
+call plug#end()
 
 " Moving around, searching and patterns
 set autochdir            "Automatically change working directory to that of open file
@@ -14,6 +21,7 @@ set nowrap               "Turn off word wrapping
 set number               "Enable line numbering, taking up 6 spaces
 set numberwidth=1        "Set line numbering to take up 1 spaces
 set relativenumber       "Show line numbers relative to current line
+set termguicolors        "Enabled for colorizer plugin
 
 " Syntax highlightning
 set background=dark
@@ -37,6 +45,8 @@ set shiftwidth=4         "Indent width for autoindent
 set smartindent          "Turn on smart indent
 set softtabstop=4        "Number of spaces a tab counts when editing
 set tabstop=4            "Set tab character to 4 characters
+
+let mapleader=" " 
 
 "Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 "which is the default
