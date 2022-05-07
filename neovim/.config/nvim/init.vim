@@ -3,11 +3,13 @@ set nocompatible
 " Ignore files
 set wildignore+=**/.git/*
 
-call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-commentary'
+let g:vimdir = "~/.config/nvim"
 
-call plug#end()
+" All of the plugins are installed with Plug from this file.
+exec "source " . g:vimdir . "/plug.vim"
+" Load plugin-specific configuration.
+exec "source " . g:vimdir . "/plugin_config.vim"
 
 " Moving around, searching and patterns
 set autochdir            "Automatically change working directory to that of open file
@@ -21,7 +23,7 @@ set nowrap               "Turn off word wrapping
 set number               "Enable line numbering, taking up 6 spaces
 set numberwidth=1        "Set line numbering to take up 1 spaces
 set relativenumber       "Show line numbers relative to current line
-set termguicolors        "Enabled for colorizer plugin
+" set termguicolors        "Enabled for colorizer plugin
 
 " Syntax highlightning
 set background=dark
@@ -83,6 +85,7 @@ inoremap jk <Esc>
 nnoremap <Leader>b :ls<CR>:b<Space>
 
 " Tab navigation
+nnoremap <Tab> :tabnext<CR>
 nnoremap <Leader>tc :tabnew<CR>
 nnoremap <Leader>tj :tabnew %<CR>
 nnoremap <Leader>tn :tabnext<CR>
