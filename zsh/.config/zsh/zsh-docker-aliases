@@ -1,0 +1,44 @@
+alias dk='docker'
+
+alias dkl='docker logs'
+alias dklf='docker logs -f'
+
+alias dki='docker images'
+alias dkps='docker ps'
+alias dkpsa='docker ps -a'
+
+alias dktop='docker stats'
+
+# cool functions
+
+function dkln() {
+    docker logs -f `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'`
+}
+
+function dkstartn() {
+    docker start `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'`
+}
+
+function dkstopn() {
+    docker stop `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'`
+}
+
+function dkstatus() {
+    if [ $# -eq 0 ]
+        then docker stats --no-stream;
+        else docker stats --no-stream | grep $1;
+    fi
+}
+
+#function dke() {
+    #docker exec -it $1 /bin/sh
+#}
+
+function dke() {
+    if [ -z "$2" ]
+        then docker exec -it `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'` /bin/sh;
+    elif [ "$2" = "bash" ]
+        then docker exec -it `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'` /bin/bash;
+    else docker exec -it `docker ps --format '{{.ID}} {{.Names}}' | grep $1 | awk '{print $1}'` $2;
+    fi
+}
