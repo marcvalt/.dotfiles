@@ -17,6 +17,8 @@ M.general = {
     ["<C-l>"] = { "<Right>", "move right" },
     ["<C-j>"] = { "<Down>", "move down" },
     ["<C-k>"] = { "<Up>", "move up" },
+
+    ["jk"] = { "<ESC>", "escape" },
   },
 
   n = {
@@ -66,6 +68,10 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', opts = { expr = true } },
+
+    -- dont leave v mode when indenting 
+    ["<"] = { "<gv" },
+    [">"] = { ">gv" },
   },
 
   x = {
