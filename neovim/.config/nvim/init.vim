@@ -84,6 +84,12 @@ inoremap jk <Esc>
 " Show opened files and select which to open
 nnoremap <Leader>b :ls<CR>:b<Space>
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 " Tab navigation
 nnoremap <Tab> :tabnext<CR>
 nnoremap <Leader>tc :tabnew<CR>
